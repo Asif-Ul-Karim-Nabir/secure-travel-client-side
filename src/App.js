@@ -10,6 +10,8 @@ import Login from './Pages/Login/Login/Login';
 import AddPlan from './Pages/Login/AddPlan/AddPlan';
 import MyOrder from './Pages/Login/MyOrder/MyOrder';
 import AuthProvider from './Pages/contexts/AuthProvider';
+import PrivateAuth from './Pages/Login/PrivateAuth/PrivateAuth';
+import NotFound from './Pages/Home/NotFound/NotFound';
 
 function App() {
   return (
@@ -27,9 +29,9 @@ function App() {
           <Route exact path="/plans">
             <Plans></Plans>
           </Route>
-          <Route exact path="/plans/:_id">
+          <PrivateAuth exact path="/plans/:_id">
             <SinglePlan></SinglePlan>
-          </Route>
+          </PrivateAuth>
           <Route exact path="/login">
             <Login></Login>
           </Route>
@@ -38,6 +40,9 @@ function App() {
           </Route>
           <Route exact path="/orders">
             <MyOrder></MyOrder>
+          </Route>
+          <Route exact path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>

@@ -19,7 +19,6 @@ const Header = () => {
                 {user?.email && <Link to="/add-plan">Add Plan</Link>} 
                 {user?.email && <Link to="/orders">My Orders</Link>} 
                 {user?.email && <Link to="/home" onClick={logOut}>LogOut</Link>}
-                {/* <p>{user?.displayName}</p> */}
                 <img src={user?.photoURL} alt="" />
             </div>
         </div>

@@ -18,7 +18,7 @@ const AddPlan = () => {
     }
     return (
         <div className="addPlan-container">
-            <h2 className="pt-3">Add Plans</h2>
+            <h2 className="pt-3">Add New Plans</h2>
              <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")} placeholder="Name" />
                 <input {...register("descriptions")} placeholder="Description"/>
