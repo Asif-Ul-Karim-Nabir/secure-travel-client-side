@@ -8,19 +8,19 @@ const PrivateAuth = ({ children, ...rest }) => {
         <div>
             <Route   
             {...rest}   
-      render={({ location }) =>
-        user?.email ? (
-         children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location }
-            }}
-          />
-        )
-      }
-    />
+                render={({ location }) =>
+                  !user.email ? 
+                  children
+                   : 
+                    <Redirect
+                      to={{
+                        pathname: "/login",
+                        state: { from: location }
+                      }}
+                    />
+                  
+                }
+             />
         </div>
     );
 };
