@@ -1,0 +1,21 @@
+.plan-container {
+  /* display: flex; */
+  background-color: white;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 3px solid aqua;
+}
+.plan-container img {
+  width: 300px;
+}
+.plan-container button {
+  color: white;
+  background-color: #ff1a90;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ff1a90;
+}
+.plan-container button:hover {
+  color: #ff1a90;
+  background-color: white;
+}

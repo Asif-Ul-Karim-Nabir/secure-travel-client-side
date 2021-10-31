@@ -1,0 +1,52 @@
+.banner {
+  color: white;
+  background-image: url(../../../images/banner/secure-travel-banner-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner h2 {
+  padding-top: 8%;
+}
+.top-banner p {
+  color: white;
+  font-size: 18px;
+}
+.search {
+  color: white;
+  background: none;
+  width: 250px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ff1a90;
+}
+.search-btn {
+  color: white;
+  background-color: #ff1a90;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ff1a90;
+}
+.banner input:focus {
+  outline: none;
+}
+.search-btn:hover {
+  color: #ff1a90;
+  background-color: white;
+}
+.bottom-banner {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 70px;
+}
+.bottom-banner p {
+  font-size: 14px;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.bottom-banner p:hover {
+  background-color: white;
+  color: #000;
+}

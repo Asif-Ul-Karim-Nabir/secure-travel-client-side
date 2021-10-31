@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './Pages/Home/Home/Home';
+import Header from './Pages/Home/Header/Header';
+import Plans from './Pages/Home/Plans/Plans';
+import SinglePlan from './Pages/Home/SinglePlan/SinglePlan';
+import Footer from './Pages/Footer/Footer';
+import Login from './Pages/Login/Login/Login';
+import AddPlan from './Pages/Login/AddPlan/AddPlan';
+import MyOrder from './Pages/Login/MyOrder/MyOrder';
+import AuthProvider from './Pages/contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/home">
+            <Home></Home>
+          </Route>
+          <Route exact path="/plans">
+            <Plans></Plans>
+          </Route>
+          <Route exact path="/plans/:_id">
+            <SinglePlan></SinglePlan>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/add-Plan">
+            <AddPlan></AddPlan>
+          </Route>
+          <Route exact path="/orders">
+            <MyOrder></MyOrder>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
+      </AuthProvider>
     </div>
   );
 }

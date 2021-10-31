@@ -1,0 +1,18 @@
+.singlePlan-container {
+  background-color: #e9e3e3;
+  padding-bottom: 20px;
+}
+.singlePlan-container img {
+  width: 100%;
+}
+.singlePlan-container button {
+  color: black;
+  background-color: rgb(241, 176, 11);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.singlePlan-container button:hover {
+  color: #ff1a90;
+  background-color: white;
+}
